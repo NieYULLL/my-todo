@@ -1,0 +1,14 @@
+.container {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+}

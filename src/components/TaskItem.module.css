@@ -1,0 +1,123 @@
+.taskItem {
+  display: flex;
+  align-items: center;
+  padding: 18px 15px;
+  margin-bottom: 12px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border-left: 5px solid #6a11cb;
+  transition: all 0.3s;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.taskItem:hover {
+  background-color: #edf2f7;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.taskItem.completed {
+  opacity: 0.7;
+  border-left-color: #2ecc71;
+}
+
+.taskItem.abandoned {
+  opacity: 0.7;
+  border-left-color: #f39c12;
+}
+
+.taskItem.abandoned .taskText {
+  color: #95a5a6;
+  text-decoration: line-through;
+}
+
+.taskCheckbox {
+  width: 22px;
+  height: 22px;
+  margin-right: 15px;
+  cursor: pointer;
+  accent-color: #2ecc71;
+}
+
+.taskContent {
+  flex: 1;
+}
+
+.taskText {
+  font-size: 16px;
+  color: #333;
+  word-break: break-word;
+}
+
+.taskItem.completed .taskText {
+  text-decoration: line-through;
+  color: #95a5a6;
+}
+
+.taskDate {
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-top: 5px;
+}
+
+.taskActions {
+  display: flex;
+  gap: 10px;
+}
+
+.deleteBtn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 18px;
+}
+
+.deleteBtn:hover {
+  background-color: #c0392b;
+  transform: scale(1.1);
+}
+
+.abandonBtn {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 18px;
+}
+
+.abandonBtn:hover:not(:disabled) {
+  background-color: #e67e22;
+  transform: scale(1.1);
+}
+
+.abandonBtn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  opacity: 0.5;
+}

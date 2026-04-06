@@ -1,0 +1,54 @@
+.inputSection {
+  display: flex;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.taskInput {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.taskInput:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
+}
+
+.addBtn {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 15px rgba(106, 17, 203, 0.3);
+}
+
+.addBtn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .inputSection {
+    flex-direction: column;
+  }
+
+  .addBtn {
+    justify-content: center;
+  }
+}
